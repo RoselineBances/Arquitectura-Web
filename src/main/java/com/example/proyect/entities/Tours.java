@@ -22,7 +22,7 @@ public class Tours {
     private String description;
     private Date date_start;
     private Date date_finish;
-    private int money;
+    private Double cost;
 
     @ManyToOne
     @JoinColumn(name = "destino_id")
@@ -39,7 +39,7 @@ public class Tours {
                 ", description='" + description + '\'' +
                 ", date_start='" + date_start + '\'' +
                 ", date_finish='" + date_finish + '\'' +
-                ", cost=" + money +
+                ", cost=" + cost +
                 '}';
     }
 

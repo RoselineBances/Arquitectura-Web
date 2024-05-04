@@ -50,6 +50,9 @@ public class ToursController {
         if (tours.getDate_finish()!=null) {
             foundTours.setDate_finish(tours.getDate_finish());
         }
+        if (tours.getCost()!=null) {
+            foundTours.setCost(tours.getCost());
+        }
         Tours newTours = toursService.save(foundTours);
         return new ResponseEntity<Tours>(newTours, HttpStatus.OK);
     }
@@ -68,6 +71,9 @@ public class ToursController {
         }
         if (tours.getDate_finish()!=null) {
             foundTours.setDate_finish(tours.getDate_finish());
+        }
+        if (tours.getCost()!=null) {
+            foundTours.setCost(tours.getCost());
         }
         Tours newTours = toursService.save(foundTours);
         return new ResponseEntity<Tours>(newTours, HttpStatus.OK);
