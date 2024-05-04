@@ -18,7 +18,7 @@ import java.util.List;
 public class Tours {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
     private String name;
     private String description;
     private Date date_start;
@@ -28,9 +28,18 @@ public class Tours {
     @ManyToOne
     @JoinColumn(name = "destino_id")
     private Destino destino;
+
     @JsonIgnore
     @OneToMany(mappedBy = "tour")
     private List<EventoProgramado> eventoProgramados;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "tour")
+    private List<Empresa> empresas;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "tour")
+    private List<CaracteristicasTour> caracteristicasTours;
 
     @Override
     public String toString() {

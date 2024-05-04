@@ -1,10 +1,10 @@
 package backend.project.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
 import java.util.List;
 
@@ -12,22 +12,12 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "Empresa")
-public class Empresa {
+
+@Table(name="usuarios")
+
+public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
-    @ManyToOne
-    @JoinColumn(name = "Tours_Id")
-    private Tours tour;
-
-    @Override
-    public String toString() {
-        return "Empresa{" +
-                "id=" + id +
-
-                '}';
-    }
 }

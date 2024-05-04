@@ -10,7 +10,8 @@ public interface ToursService {
 
 
 
-    public Tours findById(Long id);
+    public Tours findById(long id);
+
 
     public Tours save(Tours tours);
     public void delete(Long id);

@@ -28,7 +28,7 @@ public class Reseña {
 
     @JsonIgnore
     @OneToOne(mappedBy = "reseña")
-    private ClienteXEventoP clienteXEventoP;
+    private ClientexEventoP clienteXEventoP;
 
 
     @Override

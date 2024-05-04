@@ -30,7 +30,7 @@ public class ToursServiceImpl implements ToursService {
         return tours;
     }
     @Override
-    public Tours findById(Long id) {
+    public Tours findById(long id) {
         Tours toursFound= toursRepository.findById(id).orElse(null);
         if (toursFound == null) {
             throw new ResourceNotFoundException("There are no Employee with the id: "+String.valueOf(id));

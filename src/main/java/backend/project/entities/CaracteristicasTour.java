@@ -15,14 +15,14 @@ public class CaracteristicasTour {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToOne
-    @JoinColumn(name = "tours_id")
+    @JoinColumn(name = "Tours_Id")
     private Tours tours;
     @ManyToOne
-    @JoinColumn(name = "actividad_Fa_id")
+    @JoinColumn(name = "actividades_Actividad_F")
     private ActividadesFa actividadesFa;
     @Override
     public String toString() {
-        return "Destino{" +
+        return "CaracteristicaTours{" +
                 "id=" + id +
                 ", tours='" + tours + '\'' +
                 ", actividadesFa='" + actividadesFa + '\'' +

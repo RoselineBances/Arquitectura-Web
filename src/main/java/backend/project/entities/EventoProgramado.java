@@ -30,12 +30,12 @@ public class EventoProgramado {
 
     @ManyToOne
     @JoinColumn(name = "Tours_Id")
-    private Tour tour;
+    private Tours tour;
 
     @Override
     public String toString() {
         return "Actividad{" +
-                "id=" + Actividad_Fa +
+                "id=" + id +
                 ", Fecha='" + Fecha + '\'' +
                 ", CantPasajeros='" + CantPasajeros + '\'' +
                 ", CostoTotal='" + CostoTotal + '\'' +

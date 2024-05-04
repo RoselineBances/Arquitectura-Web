@@ -1,7 +1,8 @@
-package backend.project.services;
+package backend.project.servicesimpl;
 
 import backend.project.entities.EventoProgramado;
 import backend.project.repositories.EventoProgramadoRepository;
+import backend.project.services.EventoProgramadoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

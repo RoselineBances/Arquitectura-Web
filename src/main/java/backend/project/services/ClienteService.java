@@ -1,14 +1,11 @@
 package backend.project.services;
 
 import backend.project.entities.Cliente;
-
 import java.util.List;
 
 public interface ClienteService {
-    public List<Cliente> listAll();
-    public List<Cliente> listByNome(String nome);
-
-    public Cliente findById(long id);
-
-
+    List<Cliente> listAll();
+    Cliente findById(long id);
+    Cliente save(Cliente cliente);
+    void delete(long id);
 }

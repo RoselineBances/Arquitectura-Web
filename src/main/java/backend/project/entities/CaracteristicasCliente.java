@@ -1,10 +1,13 @@
 package backend.project.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import javax.persistence.*;
+import java.util.List;
+
 @Entity
 @Data
 @AllArgsConstructor
@@ -14,18 +17,14 @@ import javax.persistence.*;
 public class CaracteristicasCliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private int id;
+
 
     @Column(name = "Cliente_id")
     private int clienteId;
 
-    @Column(name = "actividades_Actividad_Fav")
-    private int actividadesActividadFav;
-
-    @Column(name = "Asientos Disponibles")
-    private int asientosDisponibles;
 
     @ManyToOne
-    @JoinColumn(name = "Cliente_id", insertable = false, updatable = false)
-    private Cliente cliente;
+    @JoinColumn(name = "actividades_Actividad_Fav", insertable = false, updatable = false)
+    private ActividadesFa actividadFa;
 }
