@@ -35,5 +35,41 @@ public class ToursController {
         toursService.delete(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
-    
+    @PutMapping("/tourss/{id}")
+    public ResponseEntity<Tours> updateEmployee(@RequestBody Tours tours, @PathVariable("id") Long id) {
+        Tours foundTours = toursService.findById(id);
+        if (tours.getName()!=null) {
+            foundTours.setName(tours.getName());
+        }
+        if (tours.getDescription()!=null) {
+            foundTours.setDescription(tours.getDescription());
+        }
+        if (tours.getDate_start()!=null) {
+            foundTours.setDate_start(tours.getDate_start());
+        }
+        if (tours.getDate_finish()!=null) {
+            foundTours.setDate_finish(tours.getDate_finish());
+        }
+        Tours newTours = toursService.save(foundTours);
+        return new ResponseEntity<Tours>(newTours, HttpStatus.OK);
+    }
+
+    @PutMapping("/tourss/")
+    public ResponseEntity<Tours> updateEmployeeBody(@RequestBody Tours tours) {
+        Tours foundTours = toursService.findById(tours.getId());
+        if (tours.getName()!=null) {
+            foundTours.setName(tours.getName());
+        }
+        if (tours.getDescription()!=null) {
+            foundTours.setDescription(tours.getDescription());
+        }
+        if (tours.getDate_start()!=null) {
+            foundTours.setDate_start(tours.getDate_start());
+        }
+        if (tours.getDate_finish()!=null) {
+            foundTours.setDate_finish(tours.getDate_finish());
+        }
+        Tours newTours = toursService.save(foundTours);
+        return new ResponseEntity<Tours>(newTours, HttpStatus.OK);
+    }
 }
