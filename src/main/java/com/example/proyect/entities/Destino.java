@@ -25,7 +25,7 @@ public class Destino {
     private List<Tours> Tours;
     @Override
     public String toString() {
-        return "Employee{" +
+        return "Destino{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
