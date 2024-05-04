@@ -9,8 +9,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "caracteristicas_tours")
-public class CaracteristicasTours {
+@Table(name = "caracteristicas_tour")
+public class CaracteristicasTour {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -20,4 +20,12 @@ public class CaracteristicasTours {
     @ManyToOne
     @JoinColumn(name = "actividad_Fa_id")
     private ActividadesFa actividadesFa;
+    @Override
+    public String toString() {
+        return "Destino{" +
+                "id=" + id +
+                ", tours='" + tours + '\'' +
+                ", actividadesFa='" + actividadesFa + '\'' +
+                '}';
+    }
 }
