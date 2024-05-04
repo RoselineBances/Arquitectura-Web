@@ -1,16 +1,16 @@
 package backend.project.services;
 
-import backend.project.entities.Actividad;
+import backend.project.entities.ActividadesFa;
 
 import java.util.List;
 
 public interface ActividadService {
 
-    List<Actividad> listAll();
+    List<ActividadesFa> listAll();
 
-    Actividad findById(int id);
+    ActividadesFa findById(int id);
 
-    Actividad save(Actividad actividad);
+    ActividadesFa save(ActividadesFa actividad);
 
     void delete(int id);
 }

@@ -26,7 +26,7 @@ public class EventoProgramado {
 
     @JsonIgnore
     @OneToMany(mappedBy = "eventoprogramado")
-    private List<ClienteXEventoP> clienteXEventoPs;
+    private List<ClientexEventoP> clienteXEventoPs;
 
     @ManyToOne
     @JoinColumn(name = "Tours_Id")

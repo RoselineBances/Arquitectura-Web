@@ -13,7 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 @Table(name = "Actividades")
-public class Actividad {
+public class ActividadesFa {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,7 +25,7 @@ public class Actividad {
 
     @JsonIgnore
     @OneToMany(mappedBy = "actividad")
-    private List<CaracteristicaTours> caracteristicaTours;
+    private List<CaracteristicasTour> caracteristicaTours;
 
     @Override
     public String toString() {
